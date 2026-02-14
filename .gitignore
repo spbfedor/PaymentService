@@ -45,3 +45,19 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
+
+# БД
+postgres_data/
+pgdata/
+
+# Alembic
+alembic.ini.bak
+*.log
+
+# Тесты и покрытие
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Прочее
+.python-version
