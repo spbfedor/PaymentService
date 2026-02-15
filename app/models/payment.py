@@ -58,4 +58,11 @@ class Payment(Base):
         String(20),
         default="pending"
     )
+    created_at: Mapped[datetime] = mapped_column(
+        server_default=func.now()
+    )
+    bank_transaction_id: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True
+    )
     order: Mapped["Order"] = relationship(back_populates="payments")
