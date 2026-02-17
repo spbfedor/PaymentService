@@ -19,13 +19,13 @@ class OrderRead(OrderCreate):
 
 
 class PaymentCreate(BaseModel):
+    order_id: UUID
     amount: Decimal = Field(gt=0, decimal_places=2)
     payment_type: Literal["cash", "acquiring"]
 
 
 class PaymentRead(PaymentCreate):
     id: UUID
-    order_id: UUID
     status: str
     created_at: datetime
     bank_transaction_id: str | None = None
