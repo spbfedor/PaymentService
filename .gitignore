@@ -28,7 +28,7 @@ env.bak/
 venv.bak/
 
 # Environment variables
-.env
+# .env
 .env.local
 .env.dev
 .env.prod
